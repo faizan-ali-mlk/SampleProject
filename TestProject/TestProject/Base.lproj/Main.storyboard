@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zQV-HW-wlS">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Test Table View Controller-->
+        <scene sceneID="c0n-di-Wz4">
+            <objects>
+                <tableViewController id="zQV-HW-wlS" customClass="TestTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Km7-2G-duJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleAspectFill" id="Dug-WT-e1R">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHo-Gt-9Cv">
+                                    <rect key="frame" x="0.0" y="15" width="320" height="200"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FriendsBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="yIA-WF-71Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yIA-WF-71Q" firstAttribute="leading" secondItem="NHo-Gt-9Cv" secondAttribute="leading" id="AQ6-0f-vdY"/>
+                                        <constraint firstAttribute="trailing" secondItem="yIA-WF-71Q" secondAttribute="trailing" id="Fcu-uq-g5o"/>
+                                        <constraint firstItem="yIA-WF-71Q" firstAttribute="centerY" secondItem="NHo-Gt-9Cv" secondAttribute="centerY" constant="15" id="TjX-4t-mCE"/>
+                                        <constraint firstAttribute="bottom" secondItem="yIA-WF-71Q" secondAttribute="bottom" constant="-30" id="fcl-F2-A6L"/>
+                                        <constraint firstItem="yIA-WF-71Q" firstAttribute="top" secondItem="NHo-Gt-9Cv" secondAttribute="top" id="fnU-dS-LeM"/>
+                                        <constraint firstItem="yIA-WF-71Q" firstAttribute="centerX" secondItem="NHo-Gt-9Cv" secondAttribute="centerX" id="uo9-8v-vLy"/>
+                                    </constraints>
+                                </scrollView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="NHo-Gt-9Cv" firstAttribute="top" secondItem="Dug-WT-e1R" secondAttribute="top" constant="15" id="GfM-1a-C3w"/>
+                                <constraint firstItem="NHo-Gt-9Cv" firstAttribute="leading" secondItem="Dug-WT-e1R" secondAttribute="leading" id="Prh-n5-0pC"/>
+                                <constraint firstAttribute="bottom" secondItem="NHo-Gt-9Cv" secondAttribute="bottom" constant="15" id="t42-s3-YSq"/>
+                                <constraint firstAttribute="trailing" secondItem="NHo-Gt-9Cv" secondAttribute="trailing" id="zmP-NO-vt4"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d0x-2A-SoO">
+                                <rect key="frame" x="0.0" y="258" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0x-2A-SoO" id="TBt-rH-d7D">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zQV-HW-wlS" id="VXP-Xa-yK9"/>
+                            <outlet property="delegate" destination="zQV-HW-wlS" id="bSy-7o-EVA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpl-CK-Sfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FriendsBackground.png" width="720" height="450"/>
+    </resources>
+</document>
